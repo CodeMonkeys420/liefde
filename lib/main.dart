@@ -31,7 +31,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
             ),
           ),
         ),
-//app
+//app1234
         bottomNavigationBar: CurvedNavigationBar(
           key: _bottomNavigationKey,
           
