@@ -1,60 +1,98 @@
+import 'package:liefde/ff_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:liefde/song.dart';
+import 'package:flutter/widgets.dart';
+import 'extra.dart';
+import 'gallery.dart';
+import 'heart.dart';
+import 'home.dart';
 
-void main() => runApp(MaterialApp(home: BottomNavBar()));
+void main() => runApp(MyApp());
 
-class BottomNavBar extends StatefulWidget {
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
-  _BottomNavBarState createState() => _BottomNavBarState();
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'ff_navigation_bar Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(title: 'ff_navigation_bar Demo Home Page'),
+    );
+  }
 }
 
-class _BottomNavBarState extends State<BottomNavBar> {
-  int _page = 0;
-  GlobalKey _bottomNavigationKey = GlobalKey();
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+  final String title;
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int selectedIndex = 0;
+  int _currentIndex = 0;
+
+  final List<Widget> _children = [
+    homePage(),
+    songPage(),
+    heartPage(),
+    galleryPage(),
+    psPage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+     body:  _children[_currentIndex],
 
-     body: Container(
-          color: Colors.blueAccent,
-          child: Center(
-            child: Column(
-              children: <Widget>[
-                Text('Gelukkige Valentynsdag My Engel',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontFamily: 'FlamanteRoma',
-                  ),
-                ),
-              ],
-            ),
+      bottomNavigationBar: FFNavigationBar(
+        theme: FFNavigationBarTheme(
+          barBackgroundColor: Colors.white,
+          selectedItemBorderColor: Colors.transparent,
+          selectedItemBackgroundColor: Colors.green,
+         
+          selectedItemIconColor: Colors.white,
+          selectedItemLabelColor: Colors.black,
+          showSelectedItemShadow: false,
+          barHeight: 70,
+        ),
+        selectedIndex: _currentIndex,
+        onSelectTab: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+        items: [
+          FFNavigationBarItem(
+            iconData: Icons.home,
+            label: 'Home',
+            selectedBackgroundColor: Colors.black,
           ),
-        ),
-//app
-        bottomNavigationBar: CurvedNavigationBar(
-          key: _bottomNavigationKey,
-          
-          index: 0,
-          height: 50.0,
-          items: <Widget>[
-            Icon(Icons.home, size: 30),
-            Icon(Icons.play_arrow, size: 30),
-            Icon(Icons.favorite, size: 30),
-            Icon(Icons.photo, size: 30),
-            Icon(Icons.all_inclusive, size: 30),
-          ],
-          color: Colors.white,
-          buttonBackgroundColor: Colors.white,
-          backgroundColor: Colors.blueAccent,
-          animationCurve: Curves.easeInOut,
-          animationDuration: Duration(milliseconds: 600),
-          onTap: (index) {
-            setState(() {
-              _page = index;
-            });
-          },
-        ),
-       );
+          FFNavigationBarItem(
+            iconData: Icons.play_arrow,
+            label: 'Song',
+            selectedBackgroundColor: Colors.blue,
+          ),
+          FFNavigationBarItem(
+            iconData: Icons.favorite,
+            label: 'Love',
+            selectedBackgroundColor: Colors.red,
+          ),
+          FFNavigationBarItem(
+            iconData: Icons.photo,
+            label: 'Gallery',
+            selectedBackgroundColor: Colors.green,
+          ),
+          FFNavigationBarItem(
+            iconData: Icons.text_fields,
+            label: 'ps:',
+            selectedBackgroundColor: Colors.pink,
+          ),
+        ],
+      ),
+    );
   }
 }
