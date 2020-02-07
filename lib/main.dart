@@ -48,6 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
      body:  _children[_currentIndex],
 
+
       bottomNavigationBar: FFNavigationBar(
         theme: FFNavigationBarTheme(
           barBackgroundColor: Colors.white,
@@ -58,6 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
           selectedItemLabelColor: Colors.black,
           showSelectedItemShadow: false,
           barHeight: 70,
+
         ),
         selectedIndex: _currentIndex,
         onSelectTab: (index) {
