@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+//navigator.push gebruik om fotos te display, gebruik n ander page en loop deur index
 class galleryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
