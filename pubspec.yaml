@@ -25,7 +25,9 @@ flutter:
   - assets/
   - assets/audio/
   - assets/naruto.gif
+  - assets/shallow.jpg
   - assets/audio/lovesong.mp3
+  - assets/lovesong.mp3
   fonts:
   - family: FlamanteRoma
     fonts:
