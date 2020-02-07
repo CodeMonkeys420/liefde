@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.dart';
+import 'package:audioplayer/audioplayer.dart';
 
 class songPage extends StatefulWidget {
   @override
   _songPageState createState() => _songPageState();
 }
-AudioPlayer audioPlayer = AudioPlayer();
+Future<void> play() async {
+                  await audioPlayer.play('https://www.youtube.com/watch?v=bo_efYhYU2A');
+                  
+                }
+
+AudioPlayer audioPlayer = new AudioPlayer();
 class _songPageState extends State<songPage> {
   @override
   Widget build(BuildContext context) {
@@ -20,10 +25,9 @@ class _songPageState extends State<songPage> {
              RaisedButton(
                child: Icon(Icons.play_arrow),
                onPressed: (){
-               playLocal() async {
-               int result = await audioPlayer.play('C:\Users\Mario\AndroidStudioProjects\liefde\assets\audio\lovesong.mp3', isLocal: true);
-                 }
-             })
+                  audioPlayer.play('https://www.youtube.com/watch?v=bo_efYhYU2A');
+                  print('It runs');
+               })
            ],
          ),
        
