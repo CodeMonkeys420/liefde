@@ -1,36 +1,50 @@
 import 'package:flutter/material.dart';
-import 'package:audioplayer/audioplayer.dart';
-
+import 'package:audioplayers/audioplayers.dart';
 class songPage extends StatefulWidget {
   @override
   _songPageState createState() => _songPageState();
 }
-Future<void> play() async {
-                  await audioPlayer.play('https://www.youtube.com/watch?v=bo_efYhYU2A');
-                  
-                }
 
-AudioPlayer audioPlayer = new AudioPlayer();
+AudioPlayer audioPlayer = AudioPlayer();
+
 class _songPageState extends State<songPage> {
+
   @override
   Widget build(BuildContext context) {
     return Container(
-       
-         child: Column(//row vs column?
-           mainAxisAlignment: MainAxisAlignment.spaceAround,
-           children: <Widget>[
-             Text(
-               'page 2',
-             ),
-             RaisedButton(
-               child: Icon(Icons.play_arrow),
-               onPressed: (){
-                  audioPlayer.play('https://www.youtube.com/watch?v=bo_efYhYU2A');
-                  print('It runs');
-               })
-           ],
+      
+        child: Container(
+                  decoration: new BoxDecoration(color: Colors.blue),
+             child: Column(
+         mainAxisAlignment: MainAxisAlignment.center,
+         
+         children: <Widget>[
+          Text(
+               'Page 2',
+               style: TextStyle(
+                 fontFamily: 'FlamanteRoma' ,
+                 fontSize: 50,
+                 color: Colors.white,
+                 
+               ),
+           ),
+           Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: RaisedButton(
+                 
+                 child: Icon(Icons.play_arrow),
+                 onPressed: (){
+                    playLocal() async {
+                        int result = await audioPlayer.play('assets\audio\lovesong.mp3', isLocal: true);
+                      }
+                    print('It runs');
+                 }),
+           )
+
+          
+         ],
          ),
-       
+                              ),
     );
   }
 }

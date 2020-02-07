@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: 'FlamanteRoma',
+        
       ),
       home: MyHomePage(title: 'Valentynsdag App'),
     );
@@ -71,17 +72,17 @@ class _MyHomePageState extends State<MyHomePage> {
           FFNavigationBarItem(
             iconData: Icons.home,
             label: 'Home',
-            selectedBackgroundColor: Colors.black,
+            selectedBackgroundColor: Colors.grey[600],
           ),
           FFNavigationBarItem(
             iconData: Icons.play_arrow,
             label: 'Song',
-            selectedBackgroundColor: Colors.blue,
+            selectedBackgroundColor: Colors.red,
           ),
           FFNavigationBarItem(
             iconData: Icons.favorite,
             label: 'Love',
-            selectedBackgroundColor: Colors.red,
+            selectedBackgroundColor: Colors.cyan[300],
           ),
           FFNavigationBarItem(
             iconData: Icons.photo,
@@ -91,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
           FFNavigationBarItem(
             iconData: Icons.text_fields,
             label: 'ps:',
-            selectedBackgroundColor: Colors.pink,
+            selectedBackgroundColor: Colors.yellow,
           ),
         ],
       ),

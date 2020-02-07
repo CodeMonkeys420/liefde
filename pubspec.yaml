@@ -11,7 +11,7 @@ dependencies:
 
   cupertino_icons: ^0.1.2
   provider: ^4.0.2
-  audioplayer: ^0.5.2
+  audioplayers: ^0.14.0
   # assets_audio_player: ^1.0.1
 
 dev_dependencies:
@@ -22,6 +22,8 @@ flutter:
 
   uses-material-design: true
   assets:
+  - assets/
+  - assets/audio/
   - assets/naruto.gif
   - assets/audio/lovesong.mp3
   fonts:
