@@ -22,7 +22,7 @@ class psPage extends StatelessWidget {
                ),
             ),
 
-            Image.asset('assets/klaar.png',
+            Image.asset('assets/klaar.jpg',
               height: 256,
               width: 500,
               ),
