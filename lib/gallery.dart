@@ -14,7 +14,7 @@ class galleryPage extends StatelessWidget {
   children: <Widget>[
     Container(
       padding: const EdgeInsets.all(8),
-      child:  Image.asset('assets/naruto.gif',
+      child:  Image.asset('assets/1.jpg',
               height: 150,
               width: 150,
               ),
@@ -22,7 +22,7 @@ class galleryPage extends StatelessWidget {
     ),
     Container(
       padding: const EdgeInsets.all(8),
-      child:  Image.asset('assets/naruto.gif',
+      child:  Image.asset('assets/2.jpg',
               height: 150,
               width: 150,
               ),
@@ -30,7 +30,7 @@ class galleryPage extends StatelessWidget {
     ),
     Container(
       padding: const EdgeInsets.all(8),
-      child:  Image.asset('assets/naruto.gif',
+      child:  Image.asset('assets/3.jpg',
               height: 150,
               width: 150,
               ),
@@ -38,7 +38,7 @@ class galleryPage extends StatelessWidget {
     ),
     Container(
       padding: const EdgeInsets.all(8),
-      child:  Image.asset('assets/naruto.gif',
+      child:  Image.asset('assets/4.jpg',
               height: 150,
               width: 150,
               ),
@@ -46,7 +46,7 @@ class galleryPage extends StatelessWidget {
     ),
     Container(
       padding: const EdgeInsets.all(8),
-      child:  Image.asset('assets/naruto.gif',
+      child:  Image.asset('assets/5.jpg',
               height: 150,
               width: 150,
               ),
@@ -54,7 +54,7 @@ class galleryPage extends StatelessWidget {
     ),
     Container(
       padding: const EdgeInsets.all(8),
-      child:  Image.asset('assets/naruto.gif',
+      child:  Image.asset('assets/6.jpg',
               height: 150,
               width: 150,
               ),
@@ -62,7 +62,7 @@ class galleryPage extends StatelessWidget {
     ),
         Container(
       padding: const EdgeInsets.all(8),
-      child:  Image.asset('assets/naruto.gif',
+      child:  Image.asset('assets/7.jpg',
               height: 150,
               width: 150,
               ),
@@ -70,7 +70,7 @@ class galleryPage extends StatelessWidget {
     ),
         Container(
       padding: const EdgeInsets.all(8),
-      child:  Image.asset('assets/naruto.gif',
+      child:  Image.asset('assets/8.jpg',
               height: 150,
               width: 150,
               ),
@@ -78,7 +78,7 @@ class galleryPage extends StatelessWidget {
     ),
         Container(
       padding: const EdgeInsets.all(8),
-      child:  Image.asset('assets/naruto.gif',
+      child:  Image.asset('assets/9.jpg',
               height: 150,
               width: 150,
               ),
@@ -86,7 +86,23 @@ class galleryPage extends StatelessWidget {
     ),
         Container(
       padding: const EdgeInsets.all(8),
-      child:  Image.asset('assets/naruto.gif',
+      child:  Image.asset('assets/0.jpg',
+              height: 150,
+              width: 150,
+              ),
+      color: Colors.teal[600],
+    ),
+    //     Container(
+    //   padding: const EdgeInsets.all(8),
+    //   child:  Image.asset('assets/11.jpg',
+    //           height: 150,
+    //           width: 150,
+    //           ),
+    //   color: Colors.teal[600],
+    // ),
+        Container(
+      padding: const EdgeInsets.all(8),
+      child:  Image.asset('assets/12.jpg',
               height: 150,
               width: 150,
               ),
@@ -94,52 +110,13 @@ class galleryPage extends StatelessWidget {
     ),
         Container(
       padding: const EdgeInsets.all(8),
-      child:  Image.asset('assets/naruto.gif',
+      child:  Image.asset('assets/13.jpg',
               height: 150,
               width: 150,
               ),
       color: Colors.teal[600],
     ),
-        Container(
-      padding: const EdgeInsets.all(8),
-      child:  Image.asset('assets/naruto.gif',
-              height: 150,
-              width: 150,
-              ),
-      color: Colors.teal[600],
-    ),
-        Container(
-      padding: const EdgeInsets.all(8),
-      child:  Image.asset('assets/naruto.gif',
-              height: 150,
-              width: 150,
-              ),
-      color: Colors.teal[600],
-    ),
-        Container(
-      padding: const EdgeInsets.all(8),
-      child:  Image.asset('assets/naruto.gif',
-              height: 150,
-              width: 150,
-              ),
-      color: Colors.teal[600],
-    ),
-        Container(
-      padding: const EdgeInsets.all(8),
-      child:  Image.asset('assets/naruto.gif',
-              height: 150,
-              width: 150,
-              ),
-      color: Colors.teal[600],
-    ),
-        Container(
-      padding: const EdgeInsets.all(8),
-      child:  Image.asset('assets/naruto.gif',
-              height: 150,
-              width: 150,
-              ),
-      color: Colors.teal[600],
-    ),
+        
     
   ],
 )

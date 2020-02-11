@@ -9,17 +9,20 @@ class psPage extends StatelessWidget {
            mainAxisAlignment: MainAxisAlignment.spaceAround,
            
            children: <Widget>[
-            Text(
-               'Page 5',
-               style: TextStyle(
-                 fontFamily: 'FlamanteRoma' ,
-                 fontSize: 50,
-                 color: Colors.white,
-                 
+            Padding(
+              padding: const EdgeInsets.only(top: 20,left: 20, right: 20),
+              child: Text(
+                 'PS. Het vir jou Journey To The Savage Planet Gedownload',
+                 style: TextStyle(
+                   fontFamily: 'FlamanteRoma' ,
+                   fontSize: 50,
+                   color: Colors.white,
+                   
+                 ),
                ),
-             ),
+            ),
 
-            Image.asset('assets/naruto.gif',
+            Image.asset('assets/klaar.png',
               height: 256,
               width: 500,
               ),

@@ -86,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           FFNavigationBarItem(
             iconData: Icons.photo,
-            label: 'Gallery',
+            label: 'Memories',
             selectedBackgroundColor: Colors.green,
           ),
           FFNavigationBarItem(

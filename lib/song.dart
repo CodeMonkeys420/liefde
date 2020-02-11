@@ -22,7 +22,7 @@ class _songPageState extends State<songPage> {
          
          children: <Widget>[
           Text(
-               'Page 2',
+               'Ons Song <3',
                style: TextStyle(
                  fontFamily: 'FlamanteRoma' ,
                  fontSize: 50,
